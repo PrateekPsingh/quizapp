@@ -1,5 +1,6 @@
 
-![Screenshot from 2025-01-20 01-12-53](https://github.com/user-attachments/assets/b6002081-e98c-4d78-ac5d-cd9b5ecbcb92)
+![Screenshot from 2025-01-20 01-12-53](https://github.com/user-attachments/assets/53b88c1d-9be2-4184-bf78-647655fbf3b6)
+
 
 # Deployed Link
  https://quizapp-gi83.onrender.com
