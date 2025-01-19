@@ -21,7 +21,7 @@ This Quiz Application is a React-based web app designed to provide a seamless an
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Prateekpsingh/QuizApp.git
+   git clone https://github.com/Prateekpsingh/quizapp.git
    cd quiz-app
    ```
 
