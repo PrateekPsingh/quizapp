@@ -8,7 +8,7 @@ const QuizPage = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
-  const [timeLeft, setTimeLeft] = useState(0.5 * 60); // 30 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(30 * 60); // 30 minutes in seconds
   const [questionStatus, setQuestionStatus] = useState([]);
   const [isPanelOpen, setIsPanelOpen] = useState(true); // For responsive navigation panel
   const [loading, setLoading] = useState(true); 
