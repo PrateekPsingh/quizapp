@@ -1,3 +1,9 @@
+
+![Screenshot from 2025-01-20 01-12-53](https://github.com/user-attachments/assets/b6002081-e98c-4d78-ac5d-cd9b5ecbcb92)
+
+# Deployed Link
+ https://quizapp-gi83.onrender.com
+
 # Quiz Application
 
 This Quiz Application is a React-based web app designed to provide a seamless and interactive quiz experience. Users can answer multiple-choice questions, navigate between them, and track their progress in real-time.
