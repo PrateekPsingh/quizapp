@@ -8,7 +8,7 @@ const QuizPage = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
-  const [timeLeft, setTimeLeft] = useState(30 * 60); // 30 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(0.5 * 60); // 30 minutes in seconds
   const [questionStatus, setQuestionStatus] = useState([]);
   const [isPanelOpen, setIsPanelOpen] = useState(true); // For responsive navigation panel
   const [loading, setLoading] = useState(true); 
@@ -56,19 +56,22 @@ const QuizPage = () => {
   };
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 0) {
-          clearInterval(timer);
-          handleSubmit();
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [questions, selectedAnswers]);
+    if (!loading) {
+      const timer = setInterval(() => {
+        setTimeLeft((prev) => {
+          if (prev <= 0) {
+            clearInterval(timer);
+            handleSubmit(); // Submit the quiz when time runs out
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+  
+      return () => clearInterval(timer); // Clean up the timer on unmount
+    }
+  }, [loading]); // Only start the timer after loading is false
+  
 
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
